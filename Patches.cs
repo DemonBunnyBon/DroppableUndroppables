@@ -39,7 +39,7 @@ namespace DroppableUndroppables
                         ItemData.m_RemainInInventoryOnDrop = false;
                         //MelonLogger.Msg("Shazam");
                     }
-                    if(Settings.instance.ImportantWeight == true)
+                    if (Settings.instance.ImportantWeight == true)
                     {
                         if (__instance.name.Contains("GEAR_Camera"))
                         {
@@ -58,6 +58,26 @@ namespace DroppableUndroppables
                             __instance.m_GearItemData.m_BaseWeight = ItemWeight.FromKilograms(0.75f);
                         }
 
+
+                    }
+                    else if (Settings.instance.ImportantWeight == false)
+                    {
+                        if (__instance.name.Contains("GEAR_Camera"))
+                        {
+                            __instance.m_GearItemData.m_BaseWeight = ItemWeight.FromKilograms(0.0f);
+                        }
+                        else if (__instance.name.Contains("GEAR_HandheldShortwave"))
+                        {
+                            __instance.m_GearItemData.m_BaseWeight = ItemWeight.FromKilograms(0.0f);
+                        }
+                        else if (__instance.name.Contains("GEAR_BoltCutters"))
+                        {
+                            __instance.m_GearItemData.m_BaseWeight = ItemWeight.FromKilograms(0.0f);
+                        }
+                        else if (__instance.name.Contains("GEAR_Respirator"))
+                        {
+                            __instance.m_GearItemData.m_BaseWeight = ItemWeight.FromKilograms(0.0f);
+                        }
 
                     }
 
