@@ -15,6 +15,7 @@ Each item has a somewhat realistic and balanced amount of weight assigned:
 - Shortwave: 0.1 KG
 
 # Installation
+- Download and install [ModSettings](https://github.com/DigitalzombieTLD/ModSettings/releases/), it is required.
 - Download and drop the .dll file into your mods folder.
 
 
