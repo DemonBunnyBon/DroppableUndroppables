@@ -39,6 +39,10 @@ namespace DroppableUndroppables
                         ItemData.m_RemainInInventoryOnDrop = false;
                         //MelonLogger.Msg("Shazam");
                     }
+                    if (ItemData !=null && ItemData.m_DisableMove == true && (Settings.instance.AllItem == true || Settings.instance.AllNote == true))
+                    {
+                        ItemData.m_DisableMove = false;
+                    }
                     if (Settings.instance.ImportantWeight == true)
                     {
                         if (__instance.name.Contains("GEAR_Camera"))
