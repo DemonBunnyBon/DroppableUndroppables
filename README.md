@@ -5,7 +5,7 @@ A mod for The Long Dark which makes previously undroppable items removable from 
 
 This mod makes all items droppable from the inventory, as well as giving certain items some weight, if enabled.
 
-This mod also allows to turn all collectible items such as notes, keys and the technical backpack into regular inventory items and make them droppable. This option is disabled by default. (The setting makes notes unreadable!).
+This mod also allows to turn all collectible items such as notes, keys and the technical backpack into regular inventory items and make them droppable. This option is disabled by default.
 
 
 Each item has a somewhat realistic and balanced amount of weight assigned:
