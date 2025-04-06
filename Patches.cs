@@ -25,23 +25,38 @@ namespace DroppableUndroppables
 
                     if (Collectible != null && Settings.instance.AllNote == true)
                     {
+                        if(Settings.instance.NoteDescription == true)
+                        {
+                            string note = Collectible.m_NarrativeTextLocID;
+                            __instance.m_DescriptionOverrideLocID = note;
+                        }
                         GameManager.DestroyImmediate(__instance.GetComponent<NarrativeCollectibleItem>());
-                        //MelonLogger.Msg("Shoop");
+
                     }
                     if (ItemData != null && (ItemData.m_CantDrop == true || __instance.m_CantDropItem == true) && Settings.instance.AllItem == true)
                     {
                         __instance.m_CantDropItem = false;
                         ItemData.m_CantDrop = false;
-                        //MelonLogger.Msg("Whoop");
+
                     }
                     if (ItemData != null && ItemData.m_RemainInInventoryOnDrop == true && Settings.instance.AllItem == true)
                     {
                         ItemData.m_RemainInInventoryOnDrop = false;
-                        //MelonLogger.Msg("Shazam");
+
                     }
                     if (ItemData !=null && ItemData.m_DisableMove == true && (Settings.instance.AllItem == true || Settings.instance.AllNote == true))
                     {
                         ItemData.m_DisableMove = false;
+                    }
+                    if(ItemData !=null && Settings.instance.AllItem == true && Settings.instance.AllNote == false)
+                    {
+                        if(__instance.name.Contains("GEAR_BoltCutters"))
+                        {
+                            GameManager.DestroyImmediate(__instance.GetComponent<NarrativeCollectibleItem>());
+                            ItemData.m_DisableMove = false;
+                            __instance.m_CantDropItem = false;
+                            ItemData.m_CantDrop = false;
+                        }
                     }
                     if (Settings.instance.ImportantWeight == true)
                     {
